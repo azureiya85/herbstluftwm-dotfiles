@@ -1,0 +1,403 @@
+#########################
+# SUPER + FUNCTION KEYS #
+#########################
+# if you want to assign applications to specific tags or workspaces
+# add a command behind the application to focus on that workspace if required
+# index 0 corresponds to tag or workspace 1
+# index 1 corresponds to tag or workspace	2
+# example
+
+# Vivaldi
+#super + F1
+#	vivaldi-stable & herbstclient use_index 0
+
+# Vivaldi
+super + F1
+	vivaldi-stable
+
+# Atom
+super + F2
+	geary
+
+#Inkscape
+super + F3
+    inkscape
+
+#Gimp
+super + F4
+    krita
+
+#Meld
+super + F5
+    steam
+
+#Vlc
+super + F6
+    spotify
+
+#Virtualbox
+super + F7
+    discord
+
+#Thunar
+super + F8
+    thunar
+
+#Evolution
+super + F9
+    thunderbird
+
+#Spotify
+super + F10
+    gimp
+
+#Rofi Fullscreen
+super + F11
+    rofi -show run -fullscreen
+
+#Rofi
+super + F12
+    rofi -show run
+
+
+#########################
+# SUPER + ... KEYS      #
+#########################
+
+#Atom
+super + e
+    atom
+
+#Browser
+super + w
+    firefox
+
+#conflicts with herbstluftwm
+#Conky-toggle
+#super + c
+#    conky-toggle
+
+#conflicts with herbstluftwm
+#Htop
+#super + h
+#    urxvt 'htop task manager' -e htop
+
+#Oblogout
+super + x
+    oblogout
+
+#Oblogout
+super + Pause
+    oblogout
+
+#Pavucontrol
+super + v
+    pavucontrol
+
+#Pragha
+super + m
+    pragha
+
+#conflicts with herbstluftwm
+#Rofi theme selector
+#super + r
+#    rofi-theme-selector
+
+#Termite
+super + Return
+    xfce4-terminal
+
+#conflicts with herbstluftwm
+#Thunar
+#super + f
+#    thunar
+
+#Urxvt
+super + t
+    urxvt
+
+#Xkill
+super + Escape
+    xkill
+
+#Keyboard dependent
+#super + KP_Enter
+#	  termite
+
+
+#########################
+# SUPER + SHIFT KEYS    #
+#########################
+
+#File-Manager
+super + shift + Return
+	thunar
+
+#dmenu
+super + shift + d
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+#reload sxhkd:
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+#Keyboard dependent
+#super + shift + KP_Enter
+#	thunar
+
+
+#########################
+# CONTROL + ALT KEYS    #
+#########################
+
+#am-rotate-conky
+ctrl + alt + Next
+     am-rotate-conky -n
+
+#am-rotate-conky
+ctrl + alt + Prior
+    am-rotate-conky -p
+
+#Atom
+ctrl + alt + w
+     atom
+
+#Catfish
+ctrl + alt + c
+     catfish
+
+#Chromium
+ctrl + alt + g
+    chromium -no-default-browser-check
+
+#Compton Toggle
+ctrl + alt + o
+    ~/.config/herbstluftwm/scripts/compton-toggle.sh
+
+#Evolution
+ctrl + alt + e
+     evolution
+
+#Firefox
+ctrl + alt + f
+     firefox
+
+#Nitrogen
+ctrl + alt + i
+     nitrogen
+
+#Oblogout
+ctrl + alt + Delete
+   oblogout
+
+#Pamac-manager
+ctrl + alt + p
+    pamac-manager
+
+#Pulse Audio Control
+ctrl + alt + u
+     pavucontrol
+
+#Rofi theme selector
+ctrl + alt + r
+  rofi-theme-selector
+
+#Slimlock
+ctrl + alt + k
+     slimlock
+
+#Slimlock
+ctrl + alt + l
+    slimlock
+
+#Spotify
+ctrl + alt + s
+   spotify
+
+#Termite
+ctrl + alt + Return
+     termite
+
+#Termite
+ctrl + alt + t
+    termite
+
+#Thunar
+ctrl + alt + b
+     thunar
+
+#Vivaldi
+ctrl + alt + v
+    vivaldi-stable
+
+#Xfce4-appfinder
+ctrl + alt + a
+    xfce4-appfinder
+
+#Xfce4-settings-manager
+ctrl + alt + m
+     xfce4-settings-manager
+
+#Keyboard dependent
+#ctrl + alt + KP_Enter
+#     termite
+
+
+#########################
+# ALT + ... KEYS        #
+#########################
+
+#Wallpaper trash
+alt + t
+    variety -t
+
+#Wallpaper next
+alt + n
+    variety -n
+
+#Wallpaper previous
+alt + p
+    variety -p
+
+#Wallpaper favorite
+alt + f
+    variety -f
+
+#Wallpaper previous
+alt + Left
+    playerctl previous
+
+#Wallpaper next
+alt + Right
+    playerctl next
+
+#Wallpaper toggle-pause
+alt + Up
+    playerctl play-pause
+
+#Wallpaper resume
+alt + Down
+    variety --resume
+
+#Gmrun
+alt + F2
+    gmrun
+
+#Xfce4-appfinder
+alt + F3
+    xfce4-appfinder
+
+
+#########################
+#VARIETY KEYS WITH PYWAL#
+#########################
+
+#Wallpaper trash
+alt + shift + t
+    variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper next
+alt + shift + n
+    variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper previous
+alt + shift + p
+    variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper favorite
+alt + shift + f
+    variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper update
+alt + shift + u
+    wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+
+#########################
+# CONTROL + SHIFT KEYS  #
+#########################
+
+#Xcfe4-TaskManager
+ctrl + shift + Escape
+    xfce4-taskmanager
+
+
+#########################
+#     SCREENSHOTS       #
+#########################
+
+#Scrot
+Print
+    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+#screeenshooter
+ctrl + Print
+     xfce4-screenshooter
+
+#Gnome-Screenshot
+ctrl + shift + Print
+     gnome-screenshot -i
+
+
+#########################
+#     MULTIMEDIA KEYS   #
+#########################
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#Playerctl works for Pragha, Spotify and others
+#DELETE the line for mpc if you want to use playerctl
+#putting a hashtag in front of the mpc line will NOT work
+#mpc works for ncmpcpp
+
+#PLAY
+XF86AudioPlay
+    #mpc toggle
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+     #mpc next
+     playerctl next
+
+#previous
+XF86AudioPrev
+    #mpc prev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    #mpc stop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+
+#########################
+#        POLYBAR        #
+#########################
+
+#Hide polybar
+super + y
+    polybar-msg cmd toggle
+
+
+#########################
+#   DESKTOP SPECIFIC    #
+#########################
