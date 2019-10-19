@@ -12,7 +12,7 @@ function run {
 
 #Autostart applications
 pkill -u $USER '^compton$'
-compton  --config /home/raven/.config/herbstluftwm/compton2.conf &
+compton  --config $HOME/.config/herbstluftwm/compton.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
@@ -23,15 +23,14 @@ xsetroot -cursor_name left_ptr &
 sxhkd &
 
 #feh --bg-scale ~/.config/herbstluftwm/wall.png &
-feh --bg-scale /home/raven/Pictures/Wallpapers/wall3.jpg &
-# conky -c $HOME/.config/herbstluftwm/system-overview &
-# run variety &
+feh --bg-scale /usr/share/backgrounds/arcolinux/abstract-warm-heart-4560x2160.jpg
+conky -c $HOME/.config/herbstluftwm/system-overview &
+run variety &
 nm-applet &
-#pamac-tray &
+pamac-tray &
 xfce4-power-manager &
 numlockx on &
-xfce4-terminal &
-# blueberry-tray &
+blueberry-tray &
 # nitrogen --restore &
 # caffeine &
 # vivaldi-stable &
@@ -49,7 +48,7 @@ hc() {
 }
 
 hc emit_hook reload
-f
+
 # horizontal tiling as standard
 hc set_layout horizontal
 
@@ -97,7 +96,7 @@ hc keybind $Mod-Shift-l     shift right
 # moving clients to ... on dual monitor
 # hc keybind $Mod-Shift-h chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
 # hc keybind $Mod-Shift-Left chain , lock , shift_to_monitor -l , focus_monitor -l , unlock
- # hc keybind $Mod-Shift-j chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
+# hc keybind $Mod-Shift-j chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
 # hc keybind $Mod-Shift-Down chain , lock , shift_to_monitor -d , focus_monitor -d , unlock
 # hc keybind $Mod-Shift-k chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
 # hc keybind $Mod-Shift-Up chain , lock , shift_to_monitor -u , focus_monitor -u , unlock
@@ -115,7 +114,7 @@ hc keybind $Mod-Control-space split explode
 hc keybind $Mod-r remove
 
 # resizing frames
-resizestep=1
+resizestep=0.05
 hc keybind $Mod-Control-h       resize left +$resizestep
 hc keybind $Mod-Control-j       resize down +$resizestep
 hc keybind $Mod-Control-k       resize up +$resizestep
@@ -129,9 +128,9 @@ hc keybind $Mod-Control-Right   resize right +$resizestep
 
 #names to display in menu
 #tag_names=( {1..10} )
-#tag_names=("web" term" "files" "music" "work" "games" "image" "mail" "chat" "misc")
+#tag_names=("" "" "" "" "" "" "" "image" "code" "chat")
 #tag_names=("I" "II" "III" "IV" "V" "VI" "VII" "VIII" "IX" "X")
-tag_names=("" "" "" "" "" "" "" "" "")
+tag_names=("" "" "" "" "" "")
 
 #keys to press to get to the tags
 #Qwerty
@@ -184,40 +183,38 @@ hc keybind $Mod-i jumpto urgent
 hc attr theme.reset 1
 
 # Attribute
-hc attr theme.active.color '#EB739C'
+hc attr theme.active.color '#6790EB'
 hc attr theme.active.inner_color '#141414'
 hc attr theme.active.outer_color '#6790EB'
 hc attr theme.background_color '#141414'
-hc attr theme.border_width 0
-hc attr theme.floating.border_width 0
+hc attr theme.border_width 3
+hc attr theme.floating.border_width 4
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
 hc attr theme.inner_color black
 hc attr theme.inner_width 1
-hc attr theme.normal.color '#3DABBA'
+hc attr theme.normal.color '#141414'
 hc attr theme.urgent.color orange
-hc attr theme.padding_left 10
-hc attr theme.floating.padding_left 10
-
+hc attr theme.padding_left
 
 # Set
 hc set always_show_frame 1
 hc set focus_follows_mouse 1
-hc set frame_border_active_color '#EB739C'
-hc set frame_border_normal_color '#3DABBA'
-hc set frame_bg_normal_color '#3DABBA'
-hc set frame_bg_active_color '#EB739C'
+hc set frame_border_active_color '#6790EB'
+hc set frame_border_normal_color '#141414'
+hc set frame_bg_normal_color '#141414'
+hc set frame_bg_active_color '#6790EB'
 hc set frame_border_width 3
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
-hc set frame_gap 5
+hc set frame_gap 15
 hc set frame_padding 0
 hc set mouse_recenter_gap 0
 hc set smart_frame_surroundings 1
 hc set smart_window_surroundings 0
 hc set tree_style '╾│ ├└╼─┐'
-hc set window_gap 10
-
+hc set window_gap 15
+hc set border_width 0
 
 
 # RULES
